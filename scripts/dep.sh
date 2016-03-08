@@ -9,10 +9,10 @@ apt-get -y install curl
 
 # install tools needed by XIA
 apt-get -y install make g++ git
-apt-get install libprotobuf-dev protobuf-compiler openssl libssl-dev python-tk python-dev python-requests python-crypto swig
+apt-get -y install libprotobuf-dev protobuf-compiler openssl libssl-dev python-tk python-dev python-requests python-crypto swig
 
 # documentation tools
 apt-get -y install doxygen python-sphinx
 
 # useful stuff
-apt-get -y install ack-grep ntp openssl since ssh tmux zsh
+apt-get -y install ack-grep ntp since ssh tmux zsh gdb valgrind
