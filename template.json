@@ -29,7 +29,7 @@
 	  "http_directory": "http",
 	  "iso_checksum": "86aa35a986eba6e5ad30e3d486d57efe6803ae7ea4859b0216953e9e62871131",
 	  "iso_checksum_type": "sha256",
-	  "iso_url": "file:///Users/dbarrett/Downloads/ubuntu-15.10-server-amd64.iso",
+	  "iso_url": "http://releases.ubuntu.com/15.10/ubuntu-15.10-server-amd64.iso",
 	  "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
 	  "ssh_password": "xia",
 	  "ssh_port": 22,
@@ -67,7 +67,7 @@
 	  "http_directory": "http",
 	  "iso_checksum": "86aa35a986eba6e5ad30e3d486d57efe6803ae7ea4859b0216953e9e62871131",
 	  "iso_checksum_type": "sha256",
-	  "iso_url": "file:///Users/dbarrett/Downloads/ubuntu-15.10-server-amd64.iso",
+	  "iso_url": "http://releases.ubuntu.com/15.10/ubuntu-15.10-server-amd64.iso",
 	  "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
 	  "skip_compaction": true,
 	  "ssh_password": "xia",
@@ -90,7 +90,7 @@
 		"artifact_type": "vagrant.box",
 		"metadata": {
 		  "provider": "vmware_desktop",
-		  "version": "0.0.2"
+		  "version": "0.0.3"
 		},
 		"only": [
 		  "vmware-iso"
@@ -102,7 +102,7 @@
 		"artifact_type": "vagrant.box",
 		"metadata": {
 		  "provider": "virtualbox",
-		  "version": "0.0.2"
+		  "version": "0.0.3"
 		},
 		"only": [
 		  "virtualbox-iso"
@@ -144,7 +144,7 @@
 	"vcs": true
   },
   "variables": {
-	"atlas_name": "xia-ubuntu15.10",
+	"atlas_name": "ubuntu15.10",
 	"atlas_username": "xia"
   }
 }
