@@ -1,18 +1,50 @@
 #!/bin/bash
 #
-# Setup the the box. This runs as root
+# Setup the the box for XIA development
+#
+# This runs as root
 
 apt-get -y update
-#apt-get -y update
+apt-get -y upgrade
 
-apt-get -y install curl
+# sensible defaults
+apt-get -y install build-essential  \
+					curl            \
+					emacs           \
+					g++             \
+					gcc             \
+					gdb             \
+					make            \
+					ntp             \
+					openssl         \
+					ssh             \
+					valgrind        \
+					vim             \
+					wget
 
 # install tools needed by XIA
-apt-get -y install make g++ git
-apt-get -y install libprotobuf-dev protobuf-compiler openssl libssl-dev python-tk python-dev python-requests python-crypto swig
+apt-get-y install apt-get -y coxygen            \
+							libprotobuf-dev     \
+							libssl-dev          \
+							protobuf-compiler   \
+							python-crypto swig  \
+							python-dev          \
+							python-networkx     \
+							python-pip          \
+							python-protobuf     \
+							python-requests     \
+							python-sphinx       \
+							python-tk
 
-# documentation tools
-apt-get -y install doxygen python-sphinx
+pip install pynacl
 
-# useful stuff
-apt-get -y install ack-grep ntp since ssh tmux zsh gdb valgrind
+
+# dan's extras
+apt-get -y install ack-grep \
+				since       \
+				tmux        \
+				zsh
+
+#
+# nitin's extras
+apt-get -y install screen

@@ -25,12 +25,12 @@
 	  "disk_size": 20480,
 	  "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
 	  "guest_os_type": "Ubuntu_64",
-	  "headless": false,
+	  "headless": true,
 	  "http_directory": "http",
 	  "iso_checksum": "86aa35a986eba6e5ad30e3d486d57efe6803ae7ea4859b0216953e9e62871131",
 	  "iso_checksum_type": "sha256",
 	  "iso_url": "http://releases.ubuntu.com/15.10/ubuntu-15.10-server-amd64.iso",
-	  "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
+	  "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'xia'|sudo -S bash 'shutdown.sh'",
 	  "ssh_password": "xia",
 	  "ssh_port": 22,
 	  "ssh_username": "xia",
@@ -63,12 +63,12 @@
 	  "boot_wait": "5s",
 	  "disk_size": 20480,
 	  "guest_os_type": "Ubuntu-64",
-	  "headless": false,
+	  "headless": true,
 	  "http_directory": "http",
 	  "iso_checksum": "86aa35a986eba6e5ad30e3d486d57efe6803ae7ea4859b0216953e9e62871131",
 	  "iso_checksum_type": "sha256",
 	  "iso_url": "http://releases.ubuntu.com/15.10/ubuntu-15.10-server-amd64.iso",
-	  "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
+	  "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'xia'|sudo -S bash 'shutdown.sh'",
 	  "skip_compaction": true,
 	  "ssh_password": "xia",
 	  "ssh_port": 22,
@@ -85,29 +85,29 @@
 		"keep_input_artifact": false,
 		"type": "vagrant"
 	  },
-	  {
-		"artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
-		"artifact_type": "vagrant.box",
-		"metadata": {
-		  "provider": "vmware_desktop",
-		  "version": "0.0.3"
-		},
-		"only": [
-		  "vmware-iso"
-		],
-		"type": "atlas"
-	  },
-	  {
-		"artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
-		"artifact_type": "vagrant.box",
-		"metadata": {
-		  "provider": "virtualbox",
-		  "version": "0.0.3"
-		},
-		"only": [
-		  "virtualbox-iso"
-		],
-		"type": "atlas"
+		 {
+			   "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+			   "artifact_type": "vagrant.box",
+			   "metadata": {
+				 "provider": "vmware_desktop",
+				 "version": "0.0.3"
+			   },
+			   "only": [
+				 "vmware-iso"
+			   ],
+			   "type": "atlas"
+		 },
+		 {
+			   "artifact": "{{user `atlas_username`}}/{{user `atlas_name`}}",
+			   "artifact_type": "vagrant.box",
+			   "metadata": {
+				 "provider": "virtualbox",
+				 "version": "0.0.3"
+			   },
+			   "only": [
+				 "virtualbox-iso"
+			   ],
+			  "type": "atlas"
 	  }
 	]
   ],
